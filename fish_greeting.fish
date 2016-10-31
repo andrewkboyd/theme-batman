@@ -1,9 +1,9 @@
-function fst; set_color -o fa0; end
-function snd; set_color -o 36f; end
-function trd; set_color -o f06; end
-function dim; set_color    666; end
+function fst; set_color --bold yellow; end
+function snd; set_color red; end
+function trd; set_color --bold red; end
+function dim; set_color --bold black; end
 function off; set_color normal; end
 
 function fish_greeting
-  echo (dim)(uname -mnprs)(off)
+  echo (uname -mnprs)(off)
 end

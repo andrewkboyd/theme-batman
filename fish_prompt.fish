@@ -1,7 +1,7 @@
 function fish_prompt
   test $status -ne 0;
-    and set -l colors 600 900 c00
-    or set -l colors 333 666 aaa
+    and set -l colors red red c00
+    or set -l colors black normal white
 
   set -l pwd (prompt_pwd)
   set -l base (basename "$pwd")
@@ -13,7 +13,7 @@ function fish_prompt
   echo -n (echo "$pwd" | sed -e $expr)(off)
 
   for color in $colors
-    echo -n (set_color $color)">"
+    echo -n (set_color --bold $color)">"
   end
 
   echo -n " "
